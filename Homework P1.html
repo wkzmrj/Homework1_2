@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+ 
+<title>Document</title>
+ 
+
+<body>
+     <h1>
+        1. 描述一下相对定位与绝对定位的区别
+    </h1>
+    <p>相对定位参考的元素是标签加载的原始位置，不会脱离标准流，让出原有的位置。
+        而绝对定位是参考距离最近的祖先元素，并且会脱离标准流，随时定义位置。</p>
+
+     <h1>
+        2. 描述一下你了解到的元素等级有哪些，具体介绍每一个元素等级的特点
+    </h1>
+    <p>
+        <li>块级元素
+            在文档流中单独占一行，不和其他块级元素以及行内元素同行显示，可设置宽和高</li>
+        <li>行内元素（内联元素）
+            与其他行内元素并列排列在同一行，块级元素使用display属性可以转换为行内元素</li>
+    </p>
+    <h1>3. 描述一下你所知道的清除浮动的方式（起码三种）</h1>
+    <p>
+        1. clear:both; 给标准流父级别元素添加
+        2. .clearfix:after {
+        content"";
+        display: block;
+        clear:both;
+        visibility:hidden;
+        }
+        使用伪类加内部墙
+        3. overflow:hidden 溢出隐藏
+    </p>
+    <h1>4.描述一下你所知道的视频标签属性的属性名、属性值、以及作用（起码四种)</h1>
+    <p>autoplay-autoplay-自动播放
+        <br>
+        controls-controls-显示播放控件<br>
+        loop-loop-循环播放<br>
+        width-pixels-显示播放器宽度<br>
+        height-pixels-显示播放器高度<br>
+        muted-muted-静音也能播放<br>
+    </p>
+    <h1>5.CSS3新增了伪元素选择器中双冒号与单冒号有什么区别，并阐述一下伪元素的注意事项</h1>
+    <p>两者浏览器都可以识别，双冒号是HTML5的语法规则<br>
+        注意事项<br>
+        <li>只能给双标签加</li>
+        <li>冒号前面不能空格</li>
+        <li>必须写上属性content""</li>
+        <li>before after创建的元素，属于行内元素</li>
+        <li>*因为DOM看不到，所以叫做伪元素</li>
+    </p>
+    <h1>6.标准盒模型与怪异盒模型的区别</h1>
+    <p>
+        <ul>standard:
+            div{width height padding border box-sizing}
+        </ul>
+        <ul>quirks:
+            div{width height padding border borbox}
+        </ul>
+        <br>
+        后者是内部变化，整体盒子大小不变
+    </p>
+</body>
+
+</html>

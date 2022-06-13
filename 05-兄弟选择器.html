@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, intial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box1 h2+p {
+                background-color: red;
+            }
+            p+p{
+                color:pink;
+            }
+            /* 选择之后的所有的选择器 */
+            .box2 h2~p {
+                background-color: yellowgreen;
+            }
+            </style>
+            </head>
+            <body>
+            <div class="box1">
+                <h2>这是二级标题</h2>
+                <p>段落1</p>
+                <p>段落2</p>
+                <p>段落3</p>
+            </div>
+            <div class="box2">
+                <!-- 其他兄弟选择器 -->
+                <p>段落0</p>
+                <h2>这是二级标题</h2>
+                <p>段落1</p>
+                <p>段落2</p>
+                <p>段落3</p>
+            </div>
+
+            </body>
+            </html>

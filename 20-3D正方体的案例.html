@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, intial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            /* 不是很懂为啥设置margin */
+            margin: 150px auto;
+        }
+
+        .stage {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            /* 注意：设置内部子元素在3d空间进行展示 */
+            transform-style: preserve-3d;
+            /* 第一步：父亲透视属性 */
+            perspective: 5000px;
+            /* 过度 */
+            transition: all 4s ease;
+
+        }
+        .stage:hover{
+            transform: rotateX(360deg) rotateY(360deg);
+
+        }
+
+        .stage div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            font: bold 80px/200px "arial";
+            /* 文字顺序80/200什么意思呢？ */
+            text-align: center;
+        }
+
+        .stage div:nth-child(1) {
+            background-color: rgba(255, 0, 0, 0.5);
+            transform: translateZ(100px);
+        }
+
+        .stage div:nth-child(2) {
+            background-color: rgba(0, 255, 0, 0.5);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .stage div:nth-child(3) {
+            background-color: rgba(0, 0, 255, 0.5);
+            transform: rotateX(180deg) translateZ(100px);
+        }
+
+        .stage div:nth-child(4) {
+            background-color: rgba(255, 255, 0, 0.5);
+            transform: rotateX(270deg) translateZ(100px);
+        }
+
+        .stage div:nth-child(5) {
+            background-color: rgba(255, 0, 255, 0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .stage div:nth-child(6) {
+            background-color: rgba(0, 255, 255, 0.5);
+            transform:rotateY(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="stage">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <!-- 刚犯的错：div 内部没有class 直接外部显示数字即可 -->
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, intial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+
+            }
+            .box {
+                width: 400px;
+                padding: 10px;
+                border: 1px solid black;
+            }
+            .box p {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 10px;
+                background-color: skyblue;
+            }
+            /* 给盒子内部添加伪元素，注意双冒号或者单冒号不能空格*/
+            .box::before {
+                content: "1";
+                display: block;
+                background-color: pink;
+            }
+            .box::after{
+                content: "2";
+                display: block;
+                background-color: pink;
+            }
+            </style>
+            </head>
+            <body>
+            <div class="box">
+                <p></p>
+                <p></p>
+            </div>
+            </body>
+            </html>

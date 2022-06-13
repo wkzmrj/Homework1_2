@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework P2</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            text-align: center;
+            animation: move 5s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                background: red;
+                transform: translate(0px, 0px);
+            }
+
+            25% {
+                background: yellow;
+                transform: translate(500px, 0px);
+
+            }
+
+            50% {
+                background: blue;
+                transform: translate(500px, 500px);
+
+            }
+
+            75% {
+                background-color: silver;
+                transform: translate(0px, 500px);
+
+
+             }
+            100% {
+                background: green;
+                transform: translate(0px, 0px);
+
+            }
+
+        }
+
+        /* .box2 {
+            width: 1000px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: red;
+            text-align: center;
+        } */
+        .box3 {
+            width: 800px;
+            height: 200px;
+            margin-top: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rosybrown;
+            text-decoration: dotted;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">一个盒子水平居中</div>
+    <!-- <div class="box2">第二个盒子水平居中</div> -->
+    <div class="box3">第三个盒子水平居中</div>
+</body>
+
+</html>
