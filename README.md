@@ -1,2 +1,2 @@
-# Homework2
+# Homework 1_2
 Homework for css and animation
